@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>الملف الشخصي</h1>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="profile.html">الملف الشخصي</a>
+            <a href="chat.html">الدردشة العامة</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile-section">
+            <div class="profile-header">
+                <img src="https://via.placeholder.com/150" alt="صورة الملف الشخصي" id="profileAvatar">
+                <h2 id="profileName">محمد</h2>
+                <p id="profileEmail">mohamed@example.com</p>
+            </div>
+
+            <form id="profileForm">
+                <div class="form-group">
+                    <label for="name">الاسم:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="avatar">تغيير الصورة:</label>
+                    <input type="file" id="avatar" accept="image/*">
+                </div>
+                <button type="submit">حفظ التغييرات</button>
+            </form>
+        </section>
+
+        <section class="user-posts">
+            <h2>منشوراتي</h2>
+            <div id="userPostsContainer">
+                <!-- سيتم إضافة منشورات المستخدم هنا -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 موقع التواصل الاجتماعي</p>
+    </footer>
+
+    <script src="js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رفع الملفات - موقع التواصل</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/upload.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <nav>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">SocialConnect</a>
+            <div class="nav-links">
+                <a href="index.html"><i class="fas fa-home"></i> الرئيسية</a>
+                <a href="profile.html"><i class="fas fa-user"></i> الملف الشخصي</a>
+                <a href="upload.html" class="active"><i class="fas fa-cloud-upload-alt"></i> رفع ملف</a>
+                <a href="chat.html"><i class="fas fa-comments"></i> الدردشة</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="card animate-fade" style="animation-delay: 0.2s;">
+            <h1><i class="fas fa-cloud-upload-alt"></i> رفع ملفاتك</h1>
+            <p class="subtitle">شارك ملفاتك مع الأصدقاء بسهولة</p>
+            
+            <div class="upload-area" id="uploadArea">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>اسحب وأفلت الملفات هنا أو انقر لاختيار الملفات</p>
+                <input type="file" id="fileInput" multiple>
+                <div class="file-types">
+                    <span><i class="fas fa-file-image"></i> الصور</span>
+                    <span><i class="fas fa-file-video"></i> الفيديوهات</span>
+                    <span><i class="fas fa-file-pdf"></i> مستندات PDF</span>
+                    <span><i class="fas fa-file-audio"></i> الصوتيات</span>
+                </div>
+            </div>
+            
+            <div class="upload-progress" id="uploadProgress">
+                <!-- سيتم عرض تقدم الرفع هنا -->
+            </div>
+            
+            <div class="upload-options">
+                <div class="form-group">
+                    <label for="fileTitle"><i class="fas fa-heading"></i> عنوان الملف</label>
+                    <input type="text" id="fileTitle" placeholder="أدخل عنوانًا للملف">
+                </div>
+                
+                <div class="form-group">
+                    <label for="fileDescription"><i class="fas fa-align-left"></i> الوصف</label>
+                    <textarea id="fileDescription" placeholder="أضف وصفًا للملف"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-lock"></i> الخصوصية</label>
+                    <div class="privacy-options">
+                        <label>
+                            <input type="radio" name="privacy" value="public" checked>
+                            <span><i class="fas fa-globe"></i> عام</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="privacy" value="friends">
+                            <span><i class="fas fa-user-friends"></i> الأصدقاء فقط</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="privacy" value="private">
+                            <span><i class="fas fa-lock"></i> خاص</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label><i class="fas fa-tags"></i> الوسوم</label>
+                    <div class="tags-container" id="tagsContainer">
+                        <!-- سيتم عرض الوسوم هنا -->
+                    </div>
+                    <input type="text" id="tagInput" placeholder="أضف وسمًا واضغط Enter">
+                </div>
+                
+                <button class="btn btn-primary" id="startUpload">
+                    <i class="fas fa-upload"></i> بدء الرفع
+                </button>
+            </div>
+        </div>
+        
+        <div class="card animate-fade" style="animation-delay: 0.4s;">
+            <h2><i class="fas fa-history"></i> الملفات المرفوعة حديثًا</h2>
+            <div class="recent-uploads" id="recentUploads">
+                <!-- سيتم عرض الملفات المرفوعة هنا -->
+                <div class="empty-state">
+                    <i class="fas fa-box-open"></i>
+                    <p>لا توجد ملفات مرفوعة بعد</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/particles.js"></script>
+    <script src="js/upload.js"></script>
+</body>
+</html>

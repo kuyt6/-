@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدردشة الخاصة</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .private-chat-container {
+            display: flex;
+            height: 70vh;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .contacts {
+            width: 30%;
+            border-right: 1px solid #ddd;
+            overflow-y: auto;
+        }
+        
+        .contact {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+        
+        .contact:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .contact.active {
+            background-color: #4267B2;
+            color: white;
+        }
+        
+        .chat-area {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .messages {
+            flex-grow: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            background-color: #f9f9f9;
+        }
+        
+        .message {
+            margin-bottom: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            max-width: 70%;
+        }
+        
+        .message.sent {
+            margin-left: auto;
+            background-color: #DCF8C6;
+        }
+        
+        .message.received {
+            margin-right: auto;
+        }
+        
+        .message-sender {
+            font-weight: bold;
+            color: #4267B2;
+        }
+        
+        .message-time {
+            font-size: 0.8rem;
+            color: #777;
+        }
+        
+        .chat-input {
+            display: flex;
+            padding: 1rem;
+            background-color: white;
+            border-top: 1px solid #ddd;
+        }
+        
+        #privateMessageInput {
+            flex-grow: 1;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        #sendPrivateMessage {
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>الدردشة الخاصة</h1>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="profile.html">الملف الشخصي</a>
+            <a href="chat.html">الدردشة العامة</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="private-chat-container">
+            <div class="contacts" id="contactsContainer">
+                <!-- قائمة الأصدقاء ستظهر هنا -->
+            </div>
+            <div class="chat-area">
+                <div class="messages" id="privateMessagesContainer">
+                    <!-- رسائل الدردشة الخاصة ستظهر هنا -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="privateMessageInput" placeholder="اكتب رسالتك هنا...">
+                    <button id="sendPrivateMessage">إرسال</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2023 موقع التواصل الاجتماعي</p>
+    </footer>
+
+    <script src="js/private-chat.js"></script>
+</body>
+</html>

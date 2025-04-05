@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع التواصل الاجتماعي</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>موقع التواصل الاجتماعي</h1>
+        <nav>
+            <a href="index.html">الرئيسية</a>
+            <a href="profile.html">الملف الشخصي</a>
+            <a href="chat.html">الدردشة العامة</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="upload-section">
+            <h2>رفع ملف أو صورة</h2>
+            <form id="uploadForm" enctype="multipart/form-data">
+                <input type="file" id="fileInput" accept="image/*,.pdf,.doc,.docx">
+                <textarea id="postContent" placeholder="اكتب منشورك هنا..."></textarea>
+                <button type="submit">نشر</button>
+            </form>
+        </section>
+
+        <section class="posts">
+            <h2>آخر المنشورات</h2>
+            <div id="postsContainer">
+                <!-- سيتم إضافة المنشورات هنا عبر الجافاسكريبت -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 موقع التواصل الاجتماعي</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
